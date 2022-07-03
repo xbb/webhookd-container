@@ -15,3 +15,8 @@ podman run -it --rm \
     -p 8080:8080 \
     quay.io/xbb/webhookd:latest
 ```
+
+### CA certificates
+
+If you need to trust any extra CA certificate mount it inside `/usr/local/share/ca-certificates/`, 
+the entrypoint for this image will run `update-ca-certificates` on start if that directory is not empty.

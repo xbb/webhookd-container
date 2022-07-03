@@ -8,7 +8,7 @@ RUN git clone --single-branch --depth 1 \
 
 FROM public.ecr.aws/docker/library/alpine:3.16
 
-ARG EXTRA_PACKAGES="jq curl bash moreutils"
+ARG EXTRA_PACKAGES="jq curl bash moreutils ca-certificates"
 RUN apk upgrade --no-cache && \
     [ -n "${EXTRA_PACKAGES}" ] && apk add --no-cache ${EXTRA_PACKAGES} || true
 
