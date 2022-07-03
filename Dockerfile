@@ -6,7 +6,7 @@ RUN git clone --single-branch --depth 1 \
     cd webhookd && \
     make
 
-FROM public.ecr.aws/docker/library/alpine:3.15
+FROM public.ecr.aws/docker/library/alpine:3.16
 
 ARG EXTRA_PACKAGES="jq curl bash moreutils"
 RUN apk upgrade --no-cache && \
