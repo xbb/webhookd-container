@@ -1,4 +1,4 @@
-FROM golang:1.18 AS builder
+FROM golang:1.19 AS builder
 
 RUN git clone --single-branch --depth 1 \
         --recurse-submodules --shallow-submodules \
@@ -6,7 +6,7 @@ RUN git clone --single-branch --depth 1 \
     cd webhookd && \
     make
 
-FROM alpine:3.16
+FROM alpine:3.17
 
 ARG EXTRA_PACKAGES="jq curl bash moreutils ca-certificates"
 RUN apk upgrade --no-cache && \
