@@ -2,7 +2,7 @@ FROM golang:1.21 AS builder
 
 RUN git clone --single-branch --depth 1 \
         --recurse-submodules --shallow-submodules \
-        -b v1.16.0 https://github.com/ncarlier/webhookd && \
+        -b v1.19.0 https://github.com/ncarlier/webhookd && \
     cd webhookd && \
     make
 
