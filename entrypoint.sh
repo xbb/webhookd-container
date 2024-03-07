@@ -4,4 +4,4 @@
 
 [ -f /etc/default/webhookd.env ] && . /etc/default/webhookd.env
 
-exec /usr/bin/webhookd
+exec /usr/bin/webhookd "$@"
